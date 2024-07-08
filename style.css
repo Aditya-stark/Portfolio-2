@@ -30,7 +30,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4rem 12% 4rem;
+  padding: 4rem 12% 1rem;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -119,6 +119,10 @@ span {
   line-height: 1;
 }
 
+.home-content p{
+  font-size: 14px;
+}
+
 .home-img img {
   position: relative;
   top: 3rem;
@@ -144,8 +148,21 @@ span {
   border-radius: 50%;
   color: var(--main-color);
   font-size: 2.5rem;
-  margin: 3rem 1.5rem 3rem 0;
+  margin: 3rem 1.5rem 1rem 0;
   transition: 0.3s ease-in-out;
+}
+
+.phoneNo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 4rem;
+  gap: 1rem;
+}
+
+.phoneNo i{
+  font-size: 16px;
+  color: var(--main-color);
 }
 
 .social-icons a:hover {
@@ -402,10 +419,10 @@ span {
   align-items: center;
   gap: 2.5rem;
 }
-
+/*  */
 .service-box {
   background-color: var(--main-color);
-  height: 300px;
+  height: fit-content;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
@@ -424,9 +441,19 @@ span {
   flex-direction: column;
   text-align: left;
   max-height: 200px;
-  justify-content: left;
-  align-items: baseline;
+  justify-content: center;
+  align-items: center;
   padding: 5rem 5rem;
+}
+
+#imgSec{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: black; */
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .service-info h4 {
@@ -719,5 +746,11 @@ span {
   }
   .services-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media(max-width: 1374px){
+  #imgSec img{
+    height: 70px;
   }
 }
